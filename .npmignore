@@ -1,0 +1,10 @@
+.travis.yml
+test/
+.eslintrc
+.eslintignore
+coverage/
+screenshots/
+reports/
+*.html
+*.sw*
+*.un~
