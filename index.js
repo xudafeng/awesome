@@ -15,6 +15,8 @@ const board = document.querySelector('#panel .text');
 const container = document.querySelector('#container');
 const colorInput = document.querySelector('#color_input');
 const content = document.querySelector('#panel .content');
+const leftIndent = document.querySelector('#panel .left-indent');
+const rightIndent = document.querySelector('#panel .right-indent');
 
 const LENGTH = 256;
 const STEP = 8;
@@ -24,6 +26,8 @@ const handle = (value) => {
   board.innerHTML = value;
   board.style.color = oppositeColor(value);
   content.style.background = value;
+  leftIndent.style.background = `radial-gradient(1.5rem at left bottom, transparent 100%, ${value} 100%)`;
+  rightIndent.style.background = `radial-gradient(1.5rem at right bottom, transparent 100%, ${value} 100%)`;
 };
 
 colorInput.addEventListener('change', e => {

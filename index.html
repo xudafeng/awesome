@@ -25,20 +25,42 @@
     }
     #panel .content {
       display: inline-block;
-      padding: 0.5rem 3rem;
-      border-bottom-left-radius: 1.5rem;
-      border-bottom-right-radius: 1.5rem;
-      transition-duration: 0.8s;
-      transition-timing-function: ease;
+      padding: 0.1rem 3rem;
+      border-bottom-left-radius: 2rem;
+      border-bottom-right-radius: 2rem;
       box-shadow: 0 3px 3px rgba(125, 125, 125, 0.4);
     }
+
     #panel .content:hover {
       box-shadow: 0 3px 3px rgba(125, 125, 125, 0);
     }
+
     #panel .text {
-      font-size: 4rem;
+      font-size: 3rem;
       margin: 0;
       padding: 2px;
+      transition: color 2s ease;
+    }
+
+    #panel .indent {
+      display: inline-block;
+      position: relative;
+      vertical-align: top;
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+
+    #panel .left-indent {
+      left: .34rem;
+    }
+
+    #panel .right-indent {
+      right: .34rem;
+    }
+    @media only screen and (max-width: 500px) {
+      .ribbon {
+        display: none;
+      }
     }
     </style>
   </head>
@@ -50,10 +72,12 @@
     </div>
     <div id="container"></div>
     <div id="panel">
+      <div class="left-indent indent"></div>
       <div class="content">
         <input type="color" id="color_input" />
         <pre class="text"></pre>
       </div>
+      <div class="right-indent indent"></div>
     <div>
     <script>
       var isOnline = location.protocol === 'https:';
