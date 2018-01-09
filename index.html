@@ -22,13 +22,13 @@
       left: 0;
       width: 100%;
       text-align: center;
+      z-index: 9999999;
     }
     #panel .content {
       display: inline-block;
-      padding: 0.5rem 3rem;
-      border-bottom-left-radius: 1.5rem;
-      border-bottom-right-radius: 1.5rem;
-      /* transition: background 0.8s ease; */
+      padding: 0.1rem 3rem;
+      border-bottom-left-radius: 2rem;
+      border-bottom-right-radius: 2rem;
       box-shadow: 0 3px 3px rgba(125, 125, 125, 0.4);
     }
 
@@ -37,9 +37,10 @@
     }
 
     #panel .text {
-      font-size: 4rem;
+      font-size: 3rem;
       margin: 0;
       padding: 2px;
+      transition: color 2s ease;
     }
 
     #panel .indent {
@@ -48,7 +49,6 @@
       vertical-align: top;
       width: 1.5rem;
       height: 1.5rem;
-      /* transition: background-image 0.8s ease; */
     }
 
     #panel .left-indent {
@@ -57,6 +57,11 @@
 
     #panel .right-indent {
       right: .34rem;
+    }
+    @media only screen and (max-width: 500px) {
+      .ribbon {
+        display: none;
+      }
     }
     </style>
   </head>
