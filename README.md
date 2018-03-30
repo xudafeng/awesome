@@ -14,6 +14,8 @@
 [node-image]: https://img.shields.io/badge/node.js-%3E=_8-green.svg?style=flat-square
 [node-url]: http://nodejs.org/download/
 
+![](https://wx3.sinaimg.cn/large/6d308bd9gy1fput9ems2tg20mw0k0qv8.gif)
+
 ## License
 
 The MIT License (MIT)
